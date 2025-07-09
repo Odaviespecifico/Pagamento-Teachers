@@ -109,6 +109,6 @@ function copiar(){
     let texto = document.querySelector('div.texto')
     console.log(texto)
 
-    navigator.clipboard.writeText(texto.innerHTML)
+    navigator.clipboard.writeText(texto.innerText)
     alert('Copiado com sucesso!')
 }
