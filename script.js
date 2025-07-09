@@ -105,9 +105,12 @@ function updateValues() {
         Caso não, estou a disposição para quaisquer ajustes`
 }
 
+document.addEventListener('keydown', (event) => {
+    if (event.ctrlKey || event.key == 'c') {copiar()}
+})
+
 function copiar(){
     let texto = document.querySelector('div.texto')
-    console.log(texto)
 
     navigator.clipboard.writeText(texto.innerText)
     alert('Copiado com sucesso!')
