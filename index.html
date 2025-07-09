@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="shortcut icon" href="assets/simbolo-do-dolar.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="main">
+        <div class="teacher">
+            <h2>Teacher:</h2>
+            <input type="text" name="nome_professor" id="nome_professor" autofocus placeholder="Nome do Teacher">
+        </div>
+        <h2>Turmas</h2>
+        <div class="turmas">
+            <div class="turmas-criar">
+                <input type="text" name="nomeTurma" id="nomeTurma" placeholder="Nome da turma" required>
+                <div class="valorTurma">
+                    <label for="valorTurma">Valor da turma</label>
+                    <select name="valorTurma" id="valorTurma">
+                        <option value="450">R$ 450,00</option>
+                        <option value="360">R$ 360,00</option>
+                        <option value="270">R$ 270,00</option>
+                        <option value="outro">outro</option>
+                    </select>
+                    <input class='hidden' type="number" name="valorTurmaOutro" id="valorTurmaOutro" placeholder="Digite o valor">
+                </div>
+                <div class="bonifica">
+                    <label for="bonus">A turma tem bonificação:</label>
+                    <input type="checkbox" name="bonus" id="bonus">
+                </div>
+                <button type="button" class="adicionar">Adicionar Turma</button>
+            </div>
+            <div class="turmasCriadas">
+            </div>
+            <div class="totais">
+                Total das turmas: R$ <span class="valorTotalTurma">0,00</span>
+                <br>
+                Valor da bonificação: R$ <span class="valorTotalBonus">0,00</span>
+                <br>
+                Valor total: R$ <span class="valorTotalGeral">0,00</span>
+            </div>
+        </div>
+        <div class="texto"></div>
+        <button type="button" class="copiar">Copiar</button>
+    </div>
+</body>
+</html>
