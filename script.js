@@ -63,7 +63,7 @@ function adicionarturma() {
 
     // Atualizar o textoturma
     // Refazer lógica para ajustar turmas
-    textoTurmas += `*${nome}* - R$ *${parseFloat(valor).toFixed(2)}*<br>`
+    textoTurmas += `${nome} - R$ ${parseFloat(valor).toFixed(2)}<br>`
     // Limpar o form
     document.querySelector('#nomeTurma').value = ''
     document.querySelector('#nomeTurma').focus()
@@ -101,7 +101,7 @@ function updateValues() {
         `Hello, ${capitalizeFirstLetter(teacher)}. Espero que tudo esteja ótimo!
         Segue os valores de cada turma: <br><br>
         ${textoTurmas} <br>
-        Caso esteja de acordo com esses valores, favor emitir uma NFe para o CNPJ *CNPJ: 57779903\\0001-30* no valor de R$ *${String((totalBonus + totalTurma).toFixed(2)).replace('.',',')}* <br>
+        Caso esteja de acordo com esses valores, favor emitir uma NFe para o CNPJ CNPJ: 57779903\\0001-30 no valor de R$ ${String((totalBonus + totalTurma).toFixed(2)).replace('.',',')} <br>
         Caso não, estou a disposição para quaisquer ajustes`
 }
 
