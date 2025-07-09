@@ -106,7 +106,7 @@ function updateValues() {
 }
 
 document.addEventListener('keydown', (event) => {
-    if (event.ctrlKey || event.key == 'c') {copiar()}
+    if (event.ctrlKey && event.key == 'c') {copiar()}
 })
 
 function copiar(){
